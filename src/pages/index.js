@@ -4,7 +4,6 @@ import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
-  console.log(data.allContentfulPageLayout.nodes[0].backgroundVideo.url);
   return (
     <Layout>
       <BackgroundVideo
