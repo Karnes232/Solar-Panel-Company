@@ -1,14 +1,16 @@
 import * as React from "react";
-import BackgroundVideo from "../components/BackgroundVideo/BackgroundVideo";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
+import HeroComponent from "../components/HeroComponent/HeroComponent";
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <BackgroundVideo
+      <HeroComponent
         videoUrl={data.allContentfulPageLayout.nodes[0].backgroundVideo.url}
-        smallVideoUrl={data.allContentfulPageLayout.nodes[0].backgroundVideoSmall.url}
+        smallVideoUrl={
+          data.allContentfulPageLayout.nodes[0].backgroundVideoSmall.url
+        }
       />
     </Layout>
   );
@@ -24,8 +26,8 @@ export const query = graphql`
           url
         }
         backgroundVideoSmall {
-        url
-      }
+          url
+        }
         pageName
       }
     }

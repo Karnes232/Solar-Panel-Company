@@ -16,34 +16,35 @@ const BackgroundVideo = ({ videoUrl, smallVideoUrl }) => {
       }
     }
   `);
-  const imageEffect = getImage(data.allContentfulAsset.edges[0].node.gatsbyImage);
-  const windowWidth = useWindowWidth()
+  const imageEffect = getImage(
+    data.allContentfulAsset.edges[0].node.gatsbyImage,
+  );
+  const windowWidth = useWindowWidth();
 
-  let videoLink = ""
+  let videoLink = "";
   if (windowWidth > 1180) {
-    videoLink = videoUrl
+    videoLink = videoUrl;
   } else {
-    videoLink = smallVideoUrl
+    videoLink = smallVideoUrl;
   }
   return (
-    <div className="relative">
+    <div>
       <video
         autoPlay
         loop
         muted
         playsInline
         id="backgroundVideo"
-        className="brightness-75 block w-full object-cover"
+        className="brightness-75 block w-full object-cover h-[20rem] md:h-[30rem] xl:h-[40rem] 2xl:h-[50rem]"
       >
         <source src={videoLink} type="video/mp4" />
-        
       </video>
       <GatsbyImage
-          image={imageEffect}
-          alt=""
-          className="z-50 !absolute -bottom-[1px] w-screen"
-          loading="lazy"
-        />
+        image={imageEffect}
+        alt=""
+        className="z-50 !absolute -bottom-[1px] w-screen"
+        loading="lazy"
+      />
     </div>
   );
 };

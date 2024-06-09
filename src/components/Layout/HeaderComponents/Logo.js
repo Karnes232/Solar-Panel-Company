@@ -8,7 +8,7 @@ const Logo = () => {
       allContentfulGeneralLayout {
         nodes {
           logo {
-            gatsbyImage(placeholder: BLURRED, formats: WEBP, width: 300)
+            gatsbyImage(placeholder: BLURRED, formats: WEBP, width: 240)
           }
         }
       }
