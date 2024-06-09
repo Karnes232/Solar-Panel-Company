@@ -8,6 +8,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <BackgroundVideo
         videoUrl={data.allContentfulPageLayout.nodes[0].backgroundVideo.url}
+        smallVideoUrl={data.allContentfulPageLayout.nodes[0].backgroundVideoSmall.url}
       />
     </Layout>
   );
@@ -22,6 +23,9 @@ export const query = graphql`
         backgroundVideo {
           url
         }
+        backgroundVideoSmall {
+        url
+      }
         pageName
       }
     }
