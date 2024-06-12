@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
 import HeroComponent from "../components/HeroComponent/HeroComponent";
+import SolarArrayCalculator from "../components/SolarArrayCalculator/SolarArrayCalculator";
 
 const IndexPage = ({ data }) => {
   return (
@@ -12,6 +13,8 @@ const IndexPage = ({ data }) => {
           data.allContentfulPageLayout.nodes[0].backgroundVideoSmall.url
         }
       />
+      <SolarArrayCalculator />
+      <div className="h-[100rem]"></div>
     </Layout>
   );
 };

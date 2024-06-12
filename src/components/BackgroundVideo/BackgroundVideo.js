@@ -6,7 +6,9 @@ import useWindowWidth from "../../customHooks/useWindowWidth";
 const BackgroundVideo = ({ videoUrl, smallVideoUrl }) => {
   const data = useStaticQuery(graphql`
     query ImageEffectQuery {
-      allContentfulAsset(filter: { filename: { eq: "effect-shape-grey.png" } }) {
+      allContentfulAsset(
+        filter: { filename: { eq: "effect-shape-grey.png" } }
+      ) {
         edges {
           node {
             gatsbyImage(formats: WEBP, placeholder: BLURRED, width: 1500)
