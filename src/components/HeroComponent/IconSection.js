@@ -16,7 +16,6 @@ const IconSection = () => {
       }
     }
   `);
-  console.log(data.allContentfulAsset.nodes[0].url);
   return (
     <div className="z-50 !absolute bottom-[5rem] lg:bottom-[8rem] xl:bottom-[10rem] 2xl:bottom-[12rem] w-screen flex items-center justify-center">
       <motion.div
