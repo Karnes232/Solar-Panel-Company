@@ -9,7 +9,7 @@ const LinksRight = () => {
   const windowHeight = useWindowHeight();
   let linkColor = "text-white";
   if (scrollPosition > windowHeight - 100) {
-    linkColor = "text-black";
+    linkColor = "text-white";
   }
   return (
     <div className="hidden lg:flex lg:w-[28rem] xl:w-[35rem] lg:justify-between">
