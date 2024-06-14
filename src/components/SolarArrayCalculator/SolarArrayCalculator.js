@@ -31,7 +31,7 @@ const SolarArrayCalculator = () => {
       <div className="max-w-lg min-w-[20rem] my-5 mx-2 rounded-lg p-5 overflow-hidden shadow-lg bg-[#393c47]">
         <div className="text-center pb-3 text-3xl">Solar Panels Calculator</div>
         <div className="flex flex-col md:flex-row md:space-x-4">
-          <div className="flex flex-col w-60">
+          <div className="flex flex-col md:w-60">
             <ElectricityConsumption setDailyConsumption={setDailyConsumption} />
             <SolarHours solarHours={solarHours} setSolarHours={setSolarHours} />
             <BillOffset billOffset={billOffset} setBillOffset={setBillOffset} />
@@ -40,7 +40,7 @@ const SolarArrayCalculator = () => {
               setEnvironmentalFactor={setEnvironmentalFactor}
             />
           </div>
-          <div className="flex flex-col w-60">
+          <div className="flex flex-col md:w-60">
             <SizeEstimate sizeKW={sizeEstimate} />
             <PanelOutput
               panelOutput={panelOutput}
